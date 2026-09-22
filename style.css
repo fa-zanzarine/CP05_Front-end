@@ -1,0 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: rgb(217 70 239 / 0.35);
+}
