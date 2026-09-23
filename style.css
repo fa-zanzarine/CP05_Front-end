@@ -5,3 +5,8 @@ html {
 ::selection {
   background-color: rgb(217 70 239 / 0.35);
 }
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
