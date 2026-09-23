@@ -23,8 +23,7 @@
 </head>
 
 <body class="bg-white text-gray-900">
-  <!-- TODO (JS): efeito de transparência no topo (menu fixo vira sólido ao rolar a página) -->
-  <header id="header" class="fixed top-0 inset-x-0 z-50 bg-gray-950">
+  <header id="header" class="fixed top-0 inset-x-0 z-50">
     <nav aria-label="Navegação principal" class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
       <a href="#inicio" aria-label="Página inicial do Melodia" class="text-2xl font-bold text-white">
         Melodia
@@ -85,7 +84,7 @@
           <h1 id="titulo-principal" class="mt-4 text-4xl font-bold leading-tight text-white md:text-5xl">
             Melodia: Sua Música, Sua Forma
           </h1>
-          <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-white text-opacity-70">
             O Melodia é um aplicativo de música que proporciona uma experiência completa e personalizada. A
             plataforma permite criar playlists personalizadas, descobrir novos artistas e aproveitar músicas com
             alta qualidade de som, tudo por meio de uma interface moderna, intuitiva e fácil de usar. Criado por
@@ -97,42 +96,16 @@
               <i class="fa-solid fa-play" aria-hidden="true"></i>
               Ouvir Agora
             </a>
-            <a href="#funcionalidades" class="rounded-full border border-white/20 px-6 py-3 font-semibold text-white">
+            <a href="#funcionalidades" class="rounded-full border border-white border-opacity-20 px-6 py-3 font-semibold text-white">
               Conheça o aplicativo
             </a>
           </div>
         </div>
 
-        <figure id="demonstracao" class="mx-auto w-full max-w-xs">
-          <div class="rounded-3xl border border-white/10 bg-white/5 p-3">
-            <div class="rounded-2xl bg-gray-900 p-5">
-              <div
-                class="aspect-square w-full rounded-2xl bg-gradient-to-br from-fuchsia-500 via-violet-600 to-orange-400">
-              </div>
-              <div class="mt-5">
-                <p class="font-semibold text-white">Noites de Neon</p>
-                <p class="text-sm text-white/50">Synth Radar</p>
-              </div>
-              <div class="mt-4 flex items-end gap-1" aria-hidden="true">
-                <span class="h-3 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-5 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-8 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-4 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-6 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-3 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-7 w-1.5 rounded-full bg-fuchsia-400"></span>
-                <span class="h-4 w-1.5 rounded-full bg-fuchsia-400"></span>
-              </div>
-              <div class="mt-5 flex items-center justify-center gap-6 text-white">
-                <i class="fa-solid fa-backward-step text-lg text-white/60" aria-hidden="true"></i>
-                <span class="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-900">
-                  <i class="fa-solid fa-pause" aria-hidden="true"></i>
-                </span>
-                <i class="fa-solid fa-forward-step text-lg text-white/60" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-          <figcaption class="mt-4 text-center text-sm text-white/50">Veja o Melodia em ação.</figcaption>
+        <figure id="demonstracao" class="w-full">
+          <img src="img/app-melodia.jpg" alt="Telas do aplicativo Melodia mostrando a tela de reprodução de música"
+            class="w-full rounded-2xl" />
+          <figcaption class="mt-4 text-center text-sm text-white text-opacity-50">Veja o Melodia em ação.</figcaption>
         </figure>
       </div>
     </section>
@@ -316,40 +289,51 @@
           Receba novidades que combinam com seu som.
         </h2>
 
-        <form class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" novalidate>
+        <form class="mx-auto mt-8 flex max-w-md flex-col gap-3" novalidate>
+          <label for="nome-contato" class="sr-only">Seu nome</label>
+          <input id="nome-contato" name="nome" type="text" required placeholder="Seu nome"
+            class="w-full rounded-full border border-white border-opacity-20 bg-white bg-opacity-5 px-5 py-3 text-white placeholder-white placeholder-opacity-40" />
+
+          <label for="telefone-contato" class="sr-only">Seu telefone</label>
+          <input id="telefone-contato" name="telefone" type="tel" placeholder="(11) 91234-5678"
+            class="w-full rounded-full border border-white border-opacity-20 bg-white bg-opacity-5 px-5 py-3 text-white placeholder-white placeholder-opacity-40" />
+
           <label for="email-contato" class="sr-only">Seu e-mail</label>
           <input id="email-contato" name="email" type="email" required placeholder="seuemail@exemplo.com"
-            class="w-full flex-1 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-white placeholder-white/40" />
+            class="w-full rounded-full border border-white border-opacity-20 bg-white bg-opacity-5 px-5 py-3 text-white placeholder-white placeholder-opacity-40" />
+
           <button type="submit"
             class="rounded-full bg-gradient-to-r from-fuchsia-600 to-violet-600 px-6 py-3 font-semibold text-white">
             Quero novidades
           </button>
         </form>
-        <p class="mt-4 text-sm text-white/40">Sem spam. Cancele quando quiser.</p>
+        <p class="mt-4 text-sm text-white text-opacity-40">Sem spam. Cancele quando quiser.</p>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-white/10 bg-gray-950 py-12">
+  <footer class="border-t border-white border-opacity-10 bg-gray-950 py-12">
     <div
       class="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 text-center md:flex-row md:justify-between md:text-left">
       <div>
         <p class="text-xl font-bold text-white">Melodia</p>
         <address class="mt-1 not-italic">
-          <a href="mailto:contato@melodia.app" class="text-white/60">contato@melodia.app</a>
+          <a href="mailto:contato@melodia.app" class="text-white text-opacity-60">contato@melodia.app</a>
         </address>
       </div>
 
       <nav aria-label="Links do rodapé">
-        <ul class="flex items-center gap-6 text-white/60">
+        <ul class="flex items-center gap-6 text-white text-opacity-60">
           <li><a href="#">Instagram</a></li>
           <li><a href="#">TikTok</a></li>
           <li><a href="#">Política de privacidade</a></li>
         </ul>
       </nav>
     </div>
-    <p class="mt-8 text-center text-sm text-white/40">&copy; 2026 Melodia. Todos os direitos reservados.</p>
+    <p class="mt-8 text-center text-sm text-white text-opacity-40">&copy; 2026 Melodia. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 
 </html>

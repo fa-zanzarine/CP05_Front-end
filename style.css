@@ -10,3 +10,8 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* aplicado pelo script.js quando a página rola um pouco */
+#header.header-solido {
+  background-color: rgb(3 7 18 / 0.9);
+}
