@@ -2,13 +2,11 @@ const header = document.getElementById('header')
 const menuBtn = document.getElementById('menu-btn')
 const menuMobile = document.getElementById('menu-mobile')
 
-// deixa o cabeçalho sólido depois que a página rola um pouco
+// deixa o cabeçalho quase sólido (90% opaco, classes do próprio Tailwind) depois que a página rola um pouco
 function verificarScroll() {
-  if (window.scrollY > 40) {
-    header.classList.add('header-solido')
-  } else {
-    header.classList.remove('header-solido')
-  }
+  const rolou = window.scrollY > 40
+  header.classList.toggle('bg-gray-950', rolou)
+  header.classList.toggle('bg-opacity-90', rolou)
 }
 
 // abre/fecha o menu do celular
