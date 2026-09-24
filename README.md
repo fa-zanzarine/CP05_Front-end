@@ -122,4 +122,4 @@ Durante o desenvolvimento foram aplicados conhecimentos relacionados a:
 - Lucca Bragga - RM 571044
 ## 🚀 Deploy na Vercel
 
-Acesse o Melodia Online
+Acesse o Melodia Online: https://cp-05-front-end-psi.vercel.app/
